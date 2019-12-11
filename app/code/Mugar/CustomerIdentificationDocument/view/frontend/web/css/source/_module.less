@@ -1,0 +1,41 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .opc-wrapper {
+		.form-shipping-cid {
+		    border-bottom: 1px solid #cccccc;
+			background: #f4f4f4;
+		    margin: 20px -15px 15px;
+		    padding: 30px 15px 20px;
+		}
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .opc-wrapper {
+		.fieldset > .field.half-row {
+			width: 49%;
+			display: inline-block;
+		}
+		.fieldset > .field.half-row-left {
+			float: left;
+		}
+		.fieldset > .field.half-row-right {
+			float: right;
+		}
+    }
+}

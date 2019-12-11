@@ -1,0 +1,24 @@
+<?php
+$cidFields = $block->getCidFields($block->getOrder());
+?>
+<?php if($cidFields): ?>
+    <div class="block block-order-details-view">
+        <div class="block-title">
+            <strong><?php /* @escapeNotVerified */ echo __('Identification Document') ?></strong>
+        </div>
+        <div class="block-content">
+            <div class="box">
+                <strong class="box-title"><span><?php /* @escapeNotVerified */ echo __('Shipping') ?></span></strong>
+                <div class="box-content">
+                    <?php echo $this->escapeHtml($cidFields->getShippingCidType()); ?>: <?php echo $this->escapeHtml($cidFields->getShippingCidNumber()); ?><br>
+                </div>
+            </div>
+            <div class="box">
+                <strong class="box-title"><span><?php /* @escapeNotVerified */ echo __('Billing') ?></span></strong>
+                <div class="box-content">
+                    <?php echo $this->escapeHtml($cidFields->getBillingCidType()); ?>: <?php echo $this->escapeHtml($cidFields->getBillingCidNumber()); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mugar\CustomerIdentificationDocument\Api\Data\CidFieldsInterface" type="Mugar\CustomerIdentificationDocument\Model\Data\CidFields" />
+    <preference for="Mugar\CustomerIdentificationDocument\Api\CidFieldsRepositoryInterface" type="Mugar\CustomerIdentificationDocument\Model\CidFieldsRepository" />
+    <preference for="Mugar\CustomerIdentificationDocument\Api\CidFieldsGuestRepositoryInterface" type="Mugar\CustomerIdentificationDocument\Model\CidFieldsGuestRepository" />
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="cidConfiguration" type="Mugar\CustomerIdentificationDocument\Plugin\CidConfiguration"/>
+    </type>
+</config>
